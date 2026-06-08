@@ -1,4 +1,7 @@
 streamlit
+os
+tempfile
 pandas
 plotly
 xerparser
+xerparser.reader
