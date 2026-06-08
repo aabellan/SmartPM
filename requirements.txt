@@ -4,4 +4,3 @@ tempfile
 pandas
 plotly
 xerparser
-xerparser.reader
