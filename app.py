@@ -1,30 +1,18 @@
 import streamlit as st
+import os
+import tempfile
+from collections import Counter
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import os
-import tempfile
+
+from xerparser.reader import Reader
 
 st.set_page_config(page_title="SmartPM Python", page_icon="📊", layout="wide")
 
-st.title("🚀 SmartPM Python Alternative")
-st.markdown("**Primavera P6 .XER Analyzer**")
+st.title("🚀 CHEC SmartPM A3")
+st.markdown("**Primavera P6 .XER Analyzer • Final Stable**")
 st.divider()
-
-# Simple file upload + basic info (we can expand later)
-uploaded_file = st.file_uploader("Upload .XER file", type=["xer"])
-
-if uploaded_file:
-    st.success("✅ File uploaded successfully!")
-    st.info("Note: Full XER parsing is currently limited on Streamlit Cloud. "
-            "Basic analysis and S-Curves are available.")
-
-    # Add your existing tabs here (Summary, Activities, etc.)
-    # For now, show placeholder
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-        "📋 Summary", "📅 Activities", "🔥 Critical Path", 
-        "🔍 Quality Dashboard", "🔗 Relationships", "📈 S-Curves"
-    ])
 
 # ====================== HELPERS ======================
 def safe_get(obj, attr, default=None):
