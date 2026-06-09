@@ -6,7 +6,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-from xerparser.reader import Reader
+from PyP6XER.reader import Reader
 
 st.set_page_config(page_title="SmartPM Python", page_icon="📊", layout="wide")
 
